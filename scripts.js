@@ -9,6 +9,7 @@ function convertValues() {
 
     const dolarToday = 5.2
     const euroToday = 5.42
+    const bitcoinToday = 128602.07
 
 
     if (currencySelect.value == "dolar") {   //se fosse usar ELSE, e mais tarde add outras moedas, talvez não ficaria bom.
@@ -24,6 +25,13 @@ function convertValues() {
             style: "currency",
             currency: "EUR"
         }).format(inputCurrencyValue / euroToday)
+    }
+
+    if (currencySelect.value == "bitcoin") {
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "BTC"
+        }).format(inputCurrencyValue / bitcoinToday)
     }
 
 
@@ -47,6 +55,11 @@ function changeCurrency() {
     if (currencySelect.value == "euro") {
         currencyName.innerHTML = "Euro"
         currencyImage.src = "./assets/euro.png"
+    }
+
+    if (currencySelect.value == "bitcoin") {
+        currencyName.innerHTML = "Bitcoin"
+        currencyImage.src = "./assets/bitcoin.png"
     }
 
     convertValues()
