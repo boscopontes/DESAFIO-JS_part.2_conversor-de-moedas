@@ -5,7 +5,7 @@ function convertValues() {
 
     const inputCurrencyValue = document.querySelector(".input-currency").value
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert")  //valor a converter:Real
-    const currencyValueConverted = document.querySelector(".currency-value")  //valor convertido:dolar,euro
+    const currencyValueConverted = document.querySelector(".currency-value")  //valor convertido:dolar,euro,bitcoin
 
     const dolarToday = 5.2
     const euroToday = 5.42
